@@ -143,11 +143,11 @@ performGO <- function(binaryList, outfile){
 ```{r message=FALSE}
 # read in config file for analysis - change config to analyze a different
 #  subset of genes (choices for config - "Sertoli", "Leydig", "Union")
-config <- "Union"
-source(paste0('config/',
-              config,'Config.R'))
+config <- "Leydig"
+source(paste0('config/',config,'Config.R'))
 
 # set up file names
+rawCountsFile <- 'data/merged_counts_noNC.txt'
 CPMOutputFile <- paste0('output/',tag,'_CPMs.csv')
 DAOutputFile <- paste0('output/',tag,'_NHvSCO_edgeR_results.csv')
 PCAOutputFile <- paste0('output/',tag, '_PCA.pdf')
